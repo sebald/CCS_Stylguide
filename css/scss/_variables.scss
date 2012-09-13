@@ -1,0 +1,106 @@
+//
+// Variables (aka settings)
+// --------------------------------------------------
+
+
+// Colors
+// -------------------------
+$backgroundColor: 				#f7f5ed !default;
+$backgroundAccentColor: 		#ebe9e1 !default;
+
+$bodyBackground:       			$backgroundColor !default;
+$textColor:						#262625 !default;
+
+$brandColor:					#1aa4cd !default;
+$brandAccentColor:				#178cb0 !default;
+
+
+
+$linkColor:						$brandColor !default;
+$linkHoverColor:				lighten($linkColor, 15%) !default;
+
+$hrColor:                		lighten($textColor, 70%) !default;
+
+// Accent color
+$white:							#fff !default;
+$black:							#000 !default;
+$success:						#33a244 !default;
+$alert:							#D84A38 !default;
+$dark:							#3b3b3b !default;
+
+
+// Typography
+// -------------------------
+$sansFontFamily:        		"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$serifFontFamily:       		Georgia, "Times New Roman", Times, serif !default;
+$monoFontFamily:        		Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+$baseFontSize:          		16px !default;
+$baseFontFamily:        		$sansFontFamily !default;
+$baseLineHeight:        		24px !default;	// use only even values!
+$altFontFamily:         		$serifFontFamily !default;
+
+$headingsFontFamily:    		inherit !default; // empty to use default, $baseFontFamily
+$headingsFontWeight:    		bold !default;    // instead of browser default, bold
+$headingsColor:         		$textColor !default; // empty to use default, $textColor
+
+
+$placeholderText:				lighten($textColor, 40%);
+
+// Forms
+// -------------------------
+$inputBackground:               $white !default;
+$inputBorderColor:              darken($white, 25%) !default;
+$inputBorderRadius:             2px !default;
+$inputDisabledBackground:       darken($inputBackground, 5%) !default;
+$formActionsBackground:         #f5f5f5 !default;
+
+
+// Buttons
+// -------------------------
+$btnBackground:                     #f9f9f9 !default;
+$btnBackgroundHighlight:            darken($btnBackground, 5%) !default;
+$btnBorder:                         #999 !default;
+
+$btnPrimaryBackground:              $linkColor !default;
+$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 10%) !default;
+$btnPrimaryBorder:					darken($btnPrimaryBackground, 15%) !default;
+
+$btnDarkBackground:              	$dark !default;
+$btnDarkBackgroundHighlight:     	darken($btnDarkBackground, 5%) !default;
+$btnDarkBorder:						darken($btnDarkBackground, 15%) !default;
+
+$btnSuccessBackground:              $success !default;
+$btnSuccessBackgroundHighlight:     darken($btnSuccessBackground, 5%) !default;
+$btnSuccessBorder:					darken($btnSuccessBackground, 15%) !default;
+
+$btnAlertBackground:              	$alert !default;
+$btnAlertBackgroundHighlight:     	darken($btnAlertBackground, 5%) !default;
+$btnAlertBorder:					darken($btnAlertBackground, 15%) !default;
+
+$btnFontSize:						13px;
+$btnFontSizeSmall:					11px;
+$btnFontSizeLarge:					16px;
+
+$btnBorderRadius:					2px;
+
+
+// GRID (frin Twitter Bootstrap)
+// --------------------------------------------------
+
+// Default 940px grid
+// -------------------------
+$gridColumns:             12 !default;
+$gridColumnWidth:         60px !default;
+$gridGutterWidth:         20px !default;
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
+
+// 1200px min
+$gridColumnWidth1200:     70px !default;
+$gridGutterWidth1200:     30px !default;
+$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1)) !default;
+
+// 768px-979px
+$gridColumnWidth768:      42px !default;
+$gridGutterWidth768:      20px !default;
+$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1)) !default;

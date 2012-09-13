@@ -1,0 +1,55 @@
+//
+// Button groups
+// --------------------------------------------------
+
+// Make the div behave like a button
+.btn-group {
+  position: relative;
+  font-size: 0; // remove as part 1 of font-size inline-block hack
+  vertical-align: middle; // match .btn alignment given font-size hack above
+  white-space: nowrap; // prevent buttons from wrapping when in tight spaces (e.g., the table on the tests page)
+  @include ie7-restore-left-whitespace();
+}
+
+// Space out series of button groups
+.btn-group + .btn-group {
+  margin-left: 5px;
+}
+
+// Float them, remove border radius, then re-add to first and last elements
+.btn-group > .btn {
+  position: relative;
+  @include border-radius(0);
+}
+.btn-group > .btn + .btn {
+  margin-left: -1px;
+}
+.btn-group > .btn,
+.btn-group > .dropdown-menu {
+  font-size: $btnFontSize; // redeclare as part 2 of font-size inline-block hack
+}
+
+// Reset fonts for other sizes
+.btn-group > .btn-small {
+  font-size: $btnFontSizeSmall;
+}
+.btn-group > .btn-large {
+  font-size: $btnFontSizeLarge;
+}
+
+// Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+.btn-group > .btn:first-child {
+	margin-left: 0;
+	@include border-radius($btnBorderRadius 0 0 $btnBorderRadius);
+}
+.btn-group > .btn:last-child {
+	@include border-radius(0 $btnBorderRadius $btnBorderRadius 0);
+}
+
+// On hover/focus/active, bring the proper btn to front
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active {
+  z-index: 2;
+}

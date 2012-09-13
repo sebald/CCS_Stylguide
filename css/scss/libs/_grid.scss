@@ -1,0 +1,17 @@
+//
+// Grid system
+// --------------------------------------------------
+
+// Container (centered, fixed-width layouts)
+.container {
+  @include container-fixed();
+}
+
+
+// Fixed (940px)
+@include grid-core($gridColumnWidth, $gridGutterWidth);
+
+// Reset utility classes due to specificity
+[class*="span"].hide {
+  display: none;
+}

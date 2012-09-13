@@ -1,0 +1,53 @@
+//
+// Page: Styleguide;
+// --------------------------------------------------
+
+section {
+	margin-bottom: 40px;
+}
+
+.page-header {
+	color: lighten($textColor, 35%);
+	padding-bottom: ($baseLineHeight / 2) - 4;
+	margin: $baseLineHeight 0 ($baseLineHeight * 0.5);
+	border-bottom: 1px solid lighten($textColor, 70%);
+}
+
+.description {
+	font-style: italic;
+	margin-bottom: $baseLineHeight * 1.2;
+}
+
+.brand-colors {
+	background-color: #fff;
+	padding: 15px;
+	border: 1px solid #d6d7d0;
+	margin-bottom: 15px;
+
+	div {
+		line-height:100px;
+		width:100%;
+		text-align: center;
+	}
+
+	.brand {
+		background-color: $brandColor;
+		color: #fff;
+	}
+	.brand-accent {
+		background-color: $brandAccentColor;
+		color: #fff;
+	}
+	.brand-background {
+		background-color: $backgroundColor;
+		color: #000;
+	}
+	.brand-background-accent {
+		background-color: $backgroundAccentColor;
+		color: #000;
+	}
+	.brand-text {
+		background-color: $textColor;
+		color: #fff;
+	}
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CC | Corporate Design | Styleguide</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+</head>
+<body class="stylguide">
+	<div class="container" role="main">
+
+
+		<div class="row">
+			<div class="span12">
+				<header>
+					<h1><span class="brand">mpas.</span> Stylguide <small>version 0.1</small></h1>
+				</header>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span3">
+				Placeholder for navigation
+			</div>
+
+			<div class="span9">
+
+  				<!-- ********************** -->
+				<!--		COLORS  		-->
+  				<!-- **********************	-->
+
+  				<section>
+  					<h1 class="page-header">Colors</h1>
+  					<p class="description">Branding, baby!</p>
+  						<div class="brand-colors">
+  							<div class="brand">Brand color</div>
+  							<div class="brand-accent">Brand accent color</div>
+  						</div>
+  						<div class="brand-colors">
+  							<div class="brand-background">Background color</div>
+  							<div class="brand-background-accent">Background accent color</div>
+  						</div>
+  						<div class="brand-colors">
+  							<div class="brand-text">Text color</div>
+  						</div>
+  				</section>
+
+
+  				<!-- ********************** -->
+				<!--		TYPOGRAPHY 	  	-->
+  				<!-- **********************	-->
+
+				<section>
+					<h1 class="page-header">Typography</h1>
+					<p class="description">These are the basic elements of typography and rhythm.</p>
+
+					<h1>h1. This is a very large header.</h1>
+					<h2>h2. This is a large header.</h2>
+					<h3>h3. This is a medium header.</h3>
+					<h4>h4. This is a moderate header.</h4>
+					<h5>h5. This is small header.</h5>
+					<h6>h6. This is very small header.</h6>
+
+					<p>This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm. To show what a paragraph looks like this needs a little more content so, let's see&#8230; Fact: If two pieces of metal touch in space, they become permanently stuck together. This may sound unbelievable, but it is true. Two pieces of metal without any coating on them will form in to one piece in the vacuum of space. This doesn’t happen on earth because the atmosphere puts a layer of oxidized material between the surfaces. This might seem like it would be a big problem on the space station but as most tools used there have come from earth, they are already coated with material. In fact, the only evidence of this seen so far has been in experiments designed to provoke the reaction. This process is called cold welding. For those who still don’t believe it, here is the Wikipedia article on Cold Welding.</p>
+				</section>
+
+  				<!-- ********************** -->
+				<!--		LINKS 	  		-->
+  				<!-- **********************	-->
+
+				<section>
+					<h1 class="page-header">Links</h1>
+					<p class="description">Where would we be without links? Not in hypertext, that's for sure! Ah, nerd humor. Anyways. Links are very standard, and the color is preset or controlled via the _variables.scss file as the link color.</p>
+
+					<h2><a href="#">h2. This is a header link.</a></h2>
+					<h3><a href="#">h3. This is a header link.</a></h3>
+					<h4><a href="#">h4. This is a header link.</a></h4>
+					<h5><a href="#">h5. This is a header link.</a></h5>
+					<p><a href="#">This is a standard inline paragraph link.</a></p>
+				</section>
+
+  				<!-- ********************** -->
+				<!--		LISTS	 	 	-->
+  				<!-- **********************	-->
+
+				<section>
+					<h1 class="page-header">Lists</h1>
+					<p class="description">Lists are helpful for, well, lists of things.</p>
+
+					<h4>ul</h4>
+					<ul>
+						<li>List item with a much longer description or more content.</li>
+						<li>List item</li>
+						<li>List item
+							<ul>
+								<li>Nested List Item</li>
+								<li>Nested List Item</li>
+								<li>Nested List Item</li>
+							</ul>
+						</li>
+						<li>List item</li>
+						<li>List item</li>
+						<li>List item</li>
+					</ul>
+
+					<h4>ol</h4>
+					<ol>
+						<li>List item with a much longer description or more content.</li>
+						<li>List item</li>
+						<li>List item
+							<ol>
+								<li>Nested List Item</li>
+								<li>Nested List Item</li>
+								<li>Nested List Item</li>
+							</ol>
+						</li>
+						<li>List item</li>
+						<li>List item</li>
+						<li>List item</li>
+					</ol>
+				</section>
+
+  				<!-- ********************** -->
+				<!--		FORMS 	 	 	-->
+  				<!-- **********************	-->
+
+  				<section>
+  					<h1 class="page-header">Forms</h1>
+  					<div class="row">
+  						<div class="span9">
+  							<p class="description">There are three tpyes for forms: default, inline and horizontal.</p>
+  						</div>
+  					</div>
+
+  					<div class="row">
+  						<div class="span9">
+  							<h4>Default</h4>
+							<form>
+								<legend>Legend</legend>
+								<label>Label name</label>
+								<input type="text" placeholder="Type something&#133;">
+								<label class="checkbox">
+									<input type="checkbox"> Check me out
+								</label>
+								<button type="submit" class="btn">Submit</button>
+							</form>
+  						</div>
+  					</div>
+					<div class="row">
+  						<div class="span6">
+<pre class="prettyprint linenums">
+&lt;form&gt;
+	&lt;legend&gt;Legend&lt;/legend&gt;
+	&lt;label&gt;Label name&lt;/label&gt;
+	&lt;input type="text" placeholder="Type something&#133;"&gt;
+	&lt;label class="checkbox"&gt;
+		&lt;input type="checkbox"&gt; Check me out
+	&lt;/label&gt;
+	&lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+&lt;/form>
+</pre>
+  						</div>
+					</div>
+
+  					<div class="row">
+  						<div class="span9">
+  							<h4>Inline</h4>
+  							<form class="form-inline">
+								<input type="text" class="span3" placeholder="Email">
+								<input type="password" class="span3" placeholder="Password">
+								<label class="checkbox">
+									<input type="checkbox"> Remember me
+								</label>
+								<button type="submit" class="btn">Sign in</button>
+							</form>
+  						</div>
+  					</div>
+					<div class="row">
+  						<div class="span6">
+<pre class="prettyprint linenums">
+&lt;form class="form-inline"&gt;
+	&lt;input type="text" class="span3" placeholder="Email"&gt;
+	&lt;input type="password" class="span3" placeholder="Password"&gt;
+	&lt;label class="checkbox"&gt;
+		&lt;input type="checkbox"&gt; Remember me
+	&lt;/label&gt;
+	&lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+  						</div>
+					</div>
+
+  					<div class="row">
+  						<div class="span9">
+  							<h4>Horizontal</h4>
+  						</div>
+  					</div>
+
+  				</section>
+
+  				<!-- ********************** -->
+				<!--		BUTTONS 	  	-->
+  				<!-- **********************	-->
+
+
+				<section>
+					<h1 class="page-header">Buttons</h1>
+					<div class="row">
+						<div class="span9">
+							<p class="description">Push the button! Buttons work with <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code> and <code>&lt;input&gt;</code>. They always have the class <code>btn</code>. Adding either <code>btn-primary</code>, <code>btn-dark</code>, <code>btn-success</code> or <code>btn-alert</code> will change the button color as shown below.<br />
+							As a best practice, try to match the element for you context to ensure matching cross-browser rendering. If you have an <code>input</code>, use an <code>type=&quot;submit&quot;&gt;</code> for your button.</p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="span2">
+	  						<a href="#" class="btn" onclick="return false;">Regular Button</a><br /><br />
+	  						<a href="#" class="btn btn-primary" onclick="return false;">Primary Button</a><br /><br />
+	  					</div>
+						<div class="span2">
+	  						<a href="#" class="btn btn-success" onclick="return false;">Success Button</a><br /><br />
+	  						<a href="#" class="btn btn-alert" onclick="return false;">Alert Button</a>
+						</div>
+	  					<div class="span2">
+	  						<a href="#" class="btn btn-dark" onclick="return false;">Dark Button</a><br /><br />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="span9">
+							<h4>Sizes</h4>
+							<p class="description">There are also difference button sizes available. Add <code>btn-large</code> or <code>btn-small</code> for two additional sizes.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span9">
+	  						<a href="#" class="btn btn-small" onclick="return false;">Regular Button</a><br /><br />
+	  						<a href="#" class="btn" onclick="return false;">Regular Button</a><br /><br />
+	  						<a href="#" class="btn btn-large" onclick="return false;">Regular Button</a><br /><br />
+	  					</div>
+	  				</div>
+
+					<div class="row">
+						<div class="span9">
+							<h4>Disabled &amp; block buttons</h4>
+							<p class="description">For disabled buttons, add the <code>.disabled</code> class to links and the <code>disabled</code> attribute for <code>&lt;button&gt;</code> elements. <br/>
+							Adding <code>btn-block</code> to the button will make the button behave like a block element.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span9">
+	  						<a href="#" class="btn disabled" onclick="return false;">Regular Button</a>
+	  						<a href="#" class="btn btn-primary disabled" onclick="return false;">Primary Button</a>
+	  						<a href="#" class="btn btn-success disabled" onclick="return false;">Primary Button</a>
+	  						<a href="#" class="btn btn-alert disabled" onclick="return false;">Primary Button</a>
+	  						<a href="#" class="btn btn-dark disabled" onclick="return false;">Primary Button</a>
+	  					</div>
+	  				</div>
+
+	  				<div class="row">
+						<div class="span9">
+							<h4>Buttons groups</h4>
+							<p class="description">Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span9">
+	  						<div class="btn-group">
+								<button class="btn">1</button>
+								<button class="btn">2</button>
+								<button class="btn">3</button>
+							</div>
+	  					</div>
+	  				</div>
+				</section>
+
+
+			</div>
+		</div>
+	</div><!--/main-->
+
+	<!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript">
+    	window.prettyPrint && prettyPrint()
+    </script>
+
+</body>
+</html>

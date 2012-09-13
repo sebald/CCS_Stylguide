@@ -1,0 +1,33 @@
+/*!
+ * Global definitions
+ */
+
+body {
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $textColor;
+  background-color: $bodyBackground;
+}
+
+// Utility classes
+// ------------------
+
+
+// Toggling content
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+// Visibility
+.invisible {
+  visibility: hidden;
+}
+
+// Clearing floats
+.clearfix {
+  @include clearfix();
+}
