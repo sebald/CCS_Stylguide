@@ -1906,14 +1906,14 @@ textarea::-webkit-input-placeholder {
 .radio,
 .checkbox {
   min-height: 18px;
-  padding-left: 18px;
+  padding-left: 22px;
 }
 
 /* line 226, scss/common/_forms.scss */
 .radio input[type="radio"],
 .checkbox input[type="checkbox"] {
   float: left;
-  margin: 6px 0 0 -18px;
+  margin: 6px 0 0 -22px;
 }
 
 /* line 233, scss/common/_forms.scss */
@@ -2145,15 +2145,59 @@ input[type="checkbox"][readonly] {
   margin-left: 0;
 }
 
-/* line 360, scss/common/_forms.scss */
+/* line 359, scss/common/_forms.scss */
 .control-group {
   margin-bottom: 12px;
 }
 
-/* line 365, scss/common/_forms.scss */
+/* line 364, scss/common/_forms.scss */
 legend + .control-group {
   margin-top: 24px;
   -webkit-margin-top-collapse: separate;
+}
+
+/* line 374, scss/common/_forms.scss */
+.form-horizontal .control-group {
+  margin-bottom: 24px;
+  *zoom: 1;
+}
+/* line 10, scss/mixins/_clearfix.scss */
+.form-horizontal .control-group:before, .form-horizontal .control-group:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 17, scss/mixins/_clearfix.scss */
+.form-horizontal .control-group:after {
+  clear: both;
+}
+/* line 379, scss/common/_forms.scss */
+.form-horizontal .control-label {
+  float: left;
+  width: 130px;
+  padding-top: 5px;
+  text-align: right;
+}
+/* line 386, scss/common/_forms.scss */
+.form-horizontal .controls {
+  *display: inline-block;
+  *padding-left: 20px;
+  margin-left: 150px;
+  *margin-left: 0;
+}
+/* line 393, scss/common/_forms.scss */
+.form-horizontal .controls:first-child {
+  *padding-left: 150px;
+}
+/* line 398, scss/common/_forms.scss */
+.form-horizontal .help-block {
+  margin-bottom: 0;
+}
+/* line 405, scss/common/_forms.scss */
+.form-horizontal input + .help-block,
+.form-horizontal select + .help-block,
+.form-horizontal textarea + .help-block {
+  margin-top: 12px;
 }
 
 /* line 9, scss/common/_buttons.scss */

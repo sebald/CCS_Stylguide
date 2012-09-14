@@ -128,17 +128,20 @@
   					<h1 class="page-header">Forms</h1>
   					<div class="row">
   						<div class="span9">
-  							<p class="description">There are three tpyes for forms: default, inline and horizontal.</p>
+  							<p class="description">There are three types for forms: default, inline and horizontal.</p>
   						</div>
   					</div>
 
   					<div class="row">
   						<div class="span9">
   							<h4>Default</h4>
+  							<p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls. <strong>Note:</strong> The CSS forces you to have a <code>label</code> for each form field!</p>
 							<form>
 								<legend>Legend</legend>
 								<label>Label name</label>
 								<input type="text" placeholder="Type something&#133;">
+								<label>Some text</label>
+								<textarea rows="3"></textarea>
 								<label class="checkbox">
 									<input type="checkbox"> Check me out
 								</label>
@@ -147,7 +150,7 @@
   						</div>
   					</div>
 					<div class="row">
-  						<div class="span6">
+  						<div class="span9">
 <pre class="prettyprint linenums">
 &lt;form&gt;
 	&lt;legend&gt;Legend&lt;/legend&gt;
@@ -165,6 +168,7 @@
   					<div class="row">
   						<div class="span9">
   							<h4>Inline</h4>
+  							<p>Add <code>.form-inline for</code> left-aligned labels and inline-block controls for a compact layout.</p>
   							<form class="form-inline">
 								<input type="text" class="span3" placeholder="Email">
 								<input type="password" class="span3" placeholder="Password">
@@ -176,7 +180,7 @@
   						</div>
   					</div>
 					<div class="row">
-  						<div class="span6">
+  						<div class="span9">
 <pre class="prettyprint linenums">
 &lt;form class="form-inline"&gt;
 	&lt;input type="text" class="span3" placeholder="Email"&gt;
@@ -193,6 +197,133 @@
   					<div class="row">
   						<div class="span9">
   							<h4>Horizontal</h4>
+  							<p>Horizontal forms are a little bit more complicated. We are using the <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> markup for this to keep it clean. Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:
+							<ul>
+								<li>Add <code>.form-horizontal</code> to the form</li>
+								<li>Wrap labels and controls in <code>.control-group</code></li>
+								<li>Add <code>.control-label</code> to the label</li>
+								<li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
+							</ul></p>
+							<form class="form-horizontal">
+								<div class="control-group">
+									<label class="control-label" for="inputEmail">Email</label>
+									<div class="controls">
+										<input type="text" id="inputEmail" placeholder="Email">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="inputPassword">Password</label>
+									<div class="controls">
+										<input type="password" id="inputPassword" placeholder="Password">
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox">
+											<input type="checkbox"> Remember me
+										</label>
+										<button type="submit" class="btn">Sign in</button>
+									</div>
+								</div>
+							</form>
+  						</div>
+  					</div>
+					<div class="row">
+  						<div class="span9">
+<pre class="prettyprint linenums">
+&lt;form class="form-horizontal"&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="password" id="inputPassword" placeholder="Password"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;div class="controls"&gt;
+      &lt;label class="checkbox"&gt;
+        &lt;input type="checkbox"&gt; Remember me
+      &lt;/label&gt;
+      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form>
+</pre>
+  						</div>
+					</div>
+
+  					<div class="row">
+  						<div class="span9">
+  							<h4>Checkboxes &amp; radios</h4>
+  							<p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many. In case you didn't know.</p>
+  							<h6>Default:</h6>
+  							<label class="checkbox">
+								<input type="checkbox" value="">
+								Option one is this and that—be sure to include why it's great
+							</label>
+
+							<label class="radio">
+								<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+								Option one is this and that—be sure to include why it's great
+							</label>
+							<label class="radio">
+								<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+								Option two can be something else and selecting it will deselect option one
+							</label>
+							<h6>Inline is also possible:</h6>
+							<label class="checkbox inline">
+								<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+							</label>
+							<label class="checkbox inline">
+								<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+							</label>
+							<label class="checkbox inline">
+							<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+							</label>
+							<br /><br />
+  						</div>
+  					</div>
+
+  					<div class="row">
+						<div class="span9">
+							<h4>Selects</h4>
+							<p>Use the default option or specify a <code>multiple="multiple"</code> to show multiple options at once.</p>
+							<select>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+							<br />
+							<select multiple="multiple">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+  					</div>
+
+  					<div class="row">
+  						<div class="span9">
+  							<h4>Sizes</h4>
+  							<p>Sizes of inputs are controlled via the <code>spanX</code> class.</p>
+  							<form class="form-horizontal">
+  								<input type="text" class="span1" placeholder=".span1"><br/><br/>
+  								<input type="text" class="span2" placeholder=".span2"><br/><br/>
+  								<input type="text" class="span3" placeholder=".span3"><br/><br/>
+  								<input type="text" class="span4" placeholder=".span4"><br/><br/>
+  								<input type="text" class="span5" placeholder=".span5"><br/><br/>
+  								<input type="text" class="span6" placeholder=".span6"><br/><br/>
+  								<input type="text" class="span7" placeholder=".span7">
+  							</form>
   						</div>
   					</div>
 
