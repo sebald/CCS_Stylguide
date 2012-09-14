@@ -20,7 +20,7 @@
 
 		<div class="row">
 			<div class="span3">
-				Placeholder for navigation
+				<nav class="section-nav"></nav>
 			</div>
 
 			<div class="span9">
@@ -29,7 +29,7 @@
 				<!--		COLORS  		-->
   				<!-- **********************	-->
 
-  				<section>
+  				<section id="colors">
   					<h1 class="page-header">Colors</h1>
   					<p class="description">Branding, baby!</p>
   						<div class="brand-colors">
@@ -50,7 +50,7 @@
 				<!--		TYPOGRAPHY 	  	-->
   				<!-- **********************	-->
 
-				<section>
+				<section id="typography">
 					<h1 class="page-header">Typography</h1>
 					<p class="description">These are the basic elements of typography and rhythm.</p>
 
@@ -68,7 +68,7 @@
 				<!--		LINKS 	  		-->
   				<!-- **********************	-->
 
-				<section>
+				<section id="links">
 					<h1 class="page-header">Links</h1>
 					<p class="description">Where would we be without links? Not in hypertext, that's for sure! Ah, nerd humor. Anyways. Links are very standard, and the color is preset or controlled via the _variables.scss file as the link color.</p>
 
@@ -83,7 +83,7 @@
 				<!--		LISTS	 	 	-->
   				<!-- **********************	-->
 
-				<section>
+				<section id="lists">
 					<h1 class="page-header">Lists</h1>
 					<p class="description">Lists are helpful for, well, lists of things.</p>
 
@@ -124,7 +124,7 @@
 				<!--		FORMS 	 	 	-->
   				<!-- **********************	-->
 
-  				<section>
+  				<section id="forms">
   					<h1 class="page-header">Forms</h1>
   					<div class="row">
   						<div class="span9">
@@ -381,7 +381,7 @@
   				<!-- **********************	-->
 
 
-				<section>
+				<section id ="buttons">
 					<h1 class="page-header">Buttons</h1>
 					<div class="row">
 						<div class="span9">
@@ -464,6 +464,17 @@
     <script src="js/google-code-prettify/prettify.js"></script>
     <script type="text/javascript">
     	window.prettyPrint && prettyPrint()
+
+    	function ucfirst(string) {
+		    return string.charAt(0).toUpperCase() + string.slice(1)
+		}
+
+    	var $sidenav = $('nav.section-nav')
+    	$('section').each(function () {
+    		console.log($(this).attr('id'))
+    		$sidenav.append('<h4><a href="'+$(this).attr('id')+'" >'+ucfirst($(this).attr('id'))+'</a></h4>')
+    	})
+
     </script>
 
 </body>

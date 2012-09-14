@@ -1659,8 +1659,8 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 24px;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 16px;
+  line-height: 24px;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -2833,53 +2833,72 @@ section {
 }
 
 /* line 9, scss/pages/_styleguide.scss */
+.section-nav {
+  position: fixed;
+  top: 100px;
+  width: 268px;
+  background-color: #fff;
+  border: 1px solid #d6d7d0;
+}
+/* line 16, scss/pages/_styleguide.scss */
+.section-nav h4 {
+  padding: 15px;
+  margin: 0;
+  border-bottom: 1px solid #d6d7d0;
+}
+/* line 22, scss/pages/_styleguide.scss */
+.section-nav h4:last-child {
+  border-bottom: none;
+}
+
+/* line 27, scss/pages/_styleguide.scss */
 .page-header {
   color: #80807d;
   padding-bottom: 8px;
-  margin: 24px 0 0px;
+  margin: 24px 0 12px;
   border-bottom: 1px solid #d9d9d7;
 }
 
-/* line 16, scss/pages/_styleguide.scss */
+/* line 34, scss/pages/_styleguide.scss */
 .description {
   font-style: italic;
-  margin-bottom: 24px;
+  margin-bottom: 28.8px;
 }
 
-/* line 21, scss/pages/_styleguide.scss */
+/* line 39, scss/pages/_styleguide.scss */
 .brand-colors {
   background-color: #fff;
   padding: 15px;
   border: 1px solid #d6d7d0;
   margin-bottom: 15px;
 }
-/* line 27, scss/pages/_styleguide.scss */
+/* line 45, scss/pages/_styleguide.scss */
 .brand-colors div {
   line-height: 100px;
   width: 100%;
   text-align: center;
 }
-/* line 33, scss/pages/_styleguide.scss */
+/* line 51, scss/pages/_styleguide.scss */
 .brand-colors .brand {
   background-color: #1aa4cd;
   color: #fff;
 }
-/* line 37, scss/pages/_styleguide.scss */
+/* line 55, scss/pages/_styleguide.scss */
 .brand-colors .brand-accent {
   background-color: #178cb0;
   color: #fff;
 }
-/* line 41, scss/pages/_styleguide.scss */
+/* line 59, scss/pages/_styleguide.scss */
 .brand-colors .brand-background {
   background-color: #f7f5ed;
   color: #000;
 }
-/* line 45, scss/pages/_styleguide.scss */
+/* line 63, scss/pages/_styleguide.scss */
 .brand-colors .brand-background-accent {
   background-color: #ebe9e1;
   color: #000;
 }
-/* line 49, scss/pages/_styleguide.scss */
+/* line 67, scss/pages/_styleguide.scss */
 .brand-colors .brand-text {
   background-color: #262625;
   color: #fff;
