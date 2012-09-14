@@ -472,7 +472,7 @@
     	var $sidenav = $('nav.section-nav')
     	$('section').each(function () {
     		console.log($(this).attr('id'))
-    		$sidenav.append('<h4><a href="'+$(this).attr('id')+'" >'+ucfirst($(this).attr('id'))+'</a></h4>')
+    		$sidenav.append('<h4><a href="#'+$(this).attr('id')+'" >'+ucfirst($(this).attr('id'))+'</a></h4>')
     	})
 
     </script>
