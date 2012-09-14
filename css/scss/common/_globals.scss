@@ -10,6 +10,16 @@ body {
   background-color: $bodyBackground;
 }
 
+::-moz-selection {
+    background: #1aa4cd;
+    text-shadow: none;
+}
+
+::selection {
+    background: #1aa4cd;
+    text-shadow: none;
+}
+
 // Utility classes
 // ------------------
 
