@@ -14,10 +14,10 @@ $textColor:							#262625 !default;
 $brandColor:						#1aa4cd !default;
 $brandAccentColor:					#178cb0 !default;
 
-
-
 $linkColor:							$brandColor !default;
 $linkHoverColor:					lighten($linkColor, 15%) !default;
+
+$selectionColor:					lighten($brandColor, 30%);
 
 $hrColor:                			lighten($textColor, 70%) !default;
 

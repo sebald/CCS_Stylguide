@@ -11,12 +11,12 @@ body {
 }
 
 ::-moz-selection {
-    background: #1aa4cd;
+    background: $selectionColor;
     text-shadow: none;
 }
 
 ::selection {
-    background: #1aa4cd;
+    background: $selectionColor;
     text-shadow: none;
 }
 
