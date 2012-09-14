@@ -314,7 +314,7 @@
   					<div class="row">
   						<div class="span9">
   							<h4>Sizes</h4>
-  							<p>Sizes of inputs are controlled via the <code>spanX</code> class.</p>
+  							<p>Sizes of inputs are controlled via the <code>span</code> class.</p>
   							<form class="form-horizontal">
   								<input type="text" class="span1" placeholder=".span1"><br/><br/>
   								<input type="text" class="span2" placeholder=".span2"><br/><br/>
@@ -324,6 +324,53 @@
   								<input type="text" class="span6" placeholder=".span6"><br/><br/>
   								<input type="text" class="span7" placeholder=".span7">
   							</form>
+  						</div>
+  					</div>
+
+  					<div class="row">
+  						<div class="span9">
+  							<h4>Prepended and appended inputs</h4>
+  							<p>Add text or buttons before or after any text-based input. Do note that <code>select</code> elements are not supported here.</p>
+  						</div>
+  					</div>
+  					<div class="row">
+  						<div class="span4">
+  							<div class="input-prepend">
+								<span class="add-on">#</span><input class="span2" size="16" type="text" placeholder="Username">
+							</div>
+							<div class="input-append">
+								<input class="span2" id="appendedInput" size="16" type="text" placeholder="Username"><span class="add-on">#</span>
+							</div>
+  						</div>
+  						<div class="span4">
+  							<div class="input-append">
+								<input class="span2" id="appendedInputButton" size="16" type="text"><button class="btn" type="button">Go!</button>
+							</div>
+
+							<div class="input-append">
+								<input class="span2" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button">Search</button><button class="btn" type="button">Options</button>
+							</div>
+  						</div>
+  					</div>
+
+  					<div class="row">
+  						<div class="span9">
+  							<h4>Input states</h4>
+  							<p>Present data in a form that's not editable by adding <code>uneditable-input</code> to an element or give a warning hint.</p>
+							<form class="form-horizontal">
+								<div class="control-group ">
+								  <label class="control-label">Input disabled</label>
+								  <div class="controls">
+								    <span class="span6 uneditable-input">This can not be edited!</span>
+								  </div>
+								</div>
+								<div class="control-group error">
+								  <label class="control-label">Input with warning</label>
+								  <div class="controls">
+								    <input type="text">
+								  </div>
+								</div>
+							</form>
   						</div>
   					</div>
 
@@ -339,7 +386,7 @@
 					<div class="row">
 						<div class="span9">
 							<p class="description">Push the button! Buttons work with <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code> and <code>&lt;input&gt;</code>. They always have the class <code>btn</code>. Adding either <code>btn-primary</code>, <code>btn-dark</code>, <code>btn-success</code> or <code>btn-alert</code> will change the button color as shown below.<br />
-							As a best practice, try to match the element for you context to ensure matching cross-browser rendering. If you have an <code>input</code>, use an <code>type=&quot;submit&quot;&gt;</code> for your button.</p>
+							As a best practice, try to match the element for you context to ensure matching cross-browser rendering. If you have an <code>input</code>, use an <code>type=&quot;submit&quot;</code> for your button.</p>
 						</div>
 					</div>
 

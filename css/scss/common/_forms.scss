@@ -114,8 +114,8 @@ input[type="color"],
     @include transition(#{border linear .2s, box-shadow linear .2s});
 
     &:hover {
-        border: 1px solid $btnBorder;
-        @include box-shadow("inset 0 1px 2px rgba(0,0,0,0.15)");
+        border: 1px solid darken($inputBorderColor, 10%);
+        @include box-shadow("inset 0 0 3px rgba(0,0,0,0.2)");
         z-index: 2;
     }
 
@@ -123,7 +123,7 @@ input[type="color"],
     &.focused {
         outline: none;
         border: 1px solid $brandColor;
-        @include box-shadow("inset 0 1px 2px rgba(0,0,0,0.3)");
+        @include box-shadow("inset 0 0 3px rgba(0,0,0,0.3)");
     }
 }
 
@@ -161,6 +161,12 @@ select {
     width: 220px; // default input width + 10px of padding that doesn't get applied
     border: 1px solid $inputBorderColor;
     background-color: $inputBackground; // Chrome on Linux and Mobile Safari need background-color
+
+    &:focus {
+        outline: none;
+        border: 1px solid $brandColor;
+        @include box-shadow("inset 0 1px 2px rgba(0,0,0,0.3)");
+    }
 }
 
 // Make multiple select elements height not fixed
@@ -169,8 +175,7 @@ select[size] {
     height: auto;
 }
 
-// Focus for select, file, radio, and checkbox
-select:focus,
+// Focus for file, radio, and checkbox
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
@@ -195,6 +200,12 @@ input[type="checkbox"]:focus {
 .uneditable-input {
     overflow: hidden; // prevent text from wrapping, but still cut it off like an input does
     white-space: nowrap;
+  background-color: darken($inputBackground, 5%);
+  color: lighten($textColor, 40%);
+
+  &:hover {
+    @include box-shadow(none);
+  }
 }
 
 // Make uneditable textareas behave like a textarea
@@ -203,7 +214,6 @@ input[type="checkbox"]:focus {
     height: auto;
 }
 
-
 // Placeholder
 // -------------------------
 
@@ -211,6 +221,14 @@ input[type="checkbox"]:focus {
 input,
 textarea {
     @include placeholder();
+}
+
+
+// FORM FIELD FEEDBACK STATES
+// --------------------------
+
+.control-group.error {
+  @include formFieldState($errorTextColor, $errorBorderColor, $errorBackground);
 }
 
 // Checkboxes + radios
@@ -225,7 +243,7 @@ textarea {
 .radio input[type="radio"],
 .checkbox input[type="checkbox"] {
     float: left;
-    margin: $CheckRadioMarginTop 0 0 #{-$textCheckRadioOffset};
+    margin: $checkRadioMarginTop 0 0 #{-$textCheckRadioOffset};
 }
 
 // Move the options list down to align with labels
@@ -304,7 +322,6 @@ input[type="checkbox"][readonly] {
 // HORIZONTAL & VERTICAL FORMS
 // ---------------------------
 
-.form-search,
 .form-inline,
 .form-horizontal {
   input,
@@ -323,22 +340,16 @@ input[type="checkbox"][readonly] {
     display: none;
   }
 }
-.form-search label,
 .form-inline label,
-.form-search .btn-group,
 .form-inline .btn-group {
   display: inline-block;
 }
 // Remove margin for input-prepend/-append
-.form-search .input-append,
 .form-inline .input-append,
-.form-search .input-prepend,
 .form-inline .input-prepend {
   margin-bottom: 0;
 }
 // Inline checkbox/radio labels (remove padding on left)
-.form-search .radio,
-.form-search .checkbox,
 .form-inline .radio,
 .form-inline .checkbox {
   padding-left: 0;
@@ -346,8 +357,6 @@ input[type="checkbox"][readonly] {
   vertical-align: middle;
 }
 // Remove float and margin, set to inline-block
-.form-search .radio input[type="radio"],
-.form-search .checkbox input[type="checkbox"],
 .form-inline .radio input[type="radio"],
 .form-inline .checkbox input[type="checkbox"] {
   float: left;
@@ -394,16 +403,96 @@ legend + .control-group {
       *padding-left: $horizontalComponentOffset;
     }
   }
-  // Remove bottom margin on block level help text since that's accounted for on .control-group
-  .help-block {
-    margin-bottom: 0;
-  }
-  // And apply it only to .help-block instances that follow a form control
+}
+
+
+// Pre-/append inputs
+// ---------------------------
+
+// Allow us to put symbols and text within the input field for a cleaner look
+.input-append,
+.input-prepend {
+  margin-bottom: 5px;
+  font-size: 0;
+  white-space: nowrap; // Prevent span and input from separating
+
   input,
   select,
-  textarea {
-    + .help-block {
-      margin-top: $baseLineHeight / 2;
+  .uneditable-input {
+    position: relative; // placed here by default so that on :focus we can place the input above the .add-on for full border and box-shadow goodness
+    margin-bottom: 0; // prevent bottom margin from screwing up alignment in stacked forms
+    *margin-left: 0;
+    font-size: $baseFontSize;
+    vertical-align: top;
+    @include border-radius(0 $inputBorderRadius $inputBorderRadius 0);
+    // Make input on top when focused so blue border and shadow always show
+    &:focus {
+      z-index: 2;
     }
+  }
+  .add-on {
+    display: inline-block;
+    width: auto;
+    height: $baseLineHeight;
+    min-width: 16px;
+    padding: 5px 5px 3px;
+    font-size: $baseFontSize;
+    font-weight: normal;
+    line-height: $baseLineHeight;
+    text-align: center;
+    //text-shadow: 0 1px 0 $white;
+    @include gradient-vertical($addonAccentBackgroundColor, $addonBackgroundColor);
+    border: 1px solid $inputBorderColor;
+  }
+  .add-on,
+  .btn {
+    vertical-align: top;
+    @include border-radius(0);
+  }
+}
+
+.input-prepend {
+  .add-on,
+  .btn {
+    margin-right: -1px;
+  }
+  .add-on:first-child,
+  .btn:first-child {
+    @include border-radius($inputBorderRadius 0 0 $inputBorderRadius);
+  }
+}
+
+.input-append {
+  input,
+  select,
+  .uneditable-input {
+    @include border-radius($inputBorderRadius 0 0 $inputBorderRadius);
+  }
+  .add-on,
+  .btn {
+    margin-left: -1px;
+  }
+  .add-on:last-child,
+  .btn:last-child {
+    @include border-radius(0 $inputBorderRadius $inputBorderRadius 0);
+  }
+}
+
+// Remove all border-radius for inputs with both prepend and append
+.input-prepend.input-append {
+  input,
+  select,
+  .uneditable-input {
+    @include border-radius(0);
+  }
+  .add-on:first-child,
+  .btn:first-child {
+    margin-right: -1px;
+    @include border-radius($inputBorderRadius 0 0 $inputBorderRadius);
+  }
+  .add-on:last-child,
+  .btn:last-child {
+    margin-left: -1px;
+    @include border-radius(0 $inputBorderRadius $inputBorderRadius 0);
   }
 }
