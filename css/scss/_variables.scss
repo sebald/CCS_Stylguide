@@ -128,14 +128,14 @@ $navbarHeight:						70px !default;
 
 $brandTextSize:						30px !default;
 
-$navbarPillmMargin:					17px !default;		// depending on the maring the pills grow smaller
+$navbarPillmMargin:					18px !default;		// depending on the maring the pills grow smaller
 
 $navbarLinkColor:					$textColor !default;
 $navbarLinkHoverColor:				$textColor !default;
-$navbarLinkColorActive:				$textColor !default;;
+$navbarLinkColorActive:				$textColor !default;
 
-$navbarLinHoverkBackground:			lighten($backgroundAccentColor, 3%) !default;
 $navbarLinkActiveBackground:		$backgroundAccentColor !default;
+$navbarLinHoverkBackground:			$backgroundAccentColor !default;
 
 // Paper
 // -------------------------

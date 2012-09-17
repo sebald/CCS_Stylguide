@@ -7,6 +7,8 @@
     margin-left: 0;
     margin-bottom: $baseLineHeight;
     list-style: none;
+    opacity: 0.2;
+    @include transition(#{opacity linear .3s});
 
     // Make links block level
     > li > a {
@@ -31,6 +33,10 @@
     // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
     *position: relative;
     *z-index: 2;
+
+    &:hover .nav {
+        opacity: 1;
+    }
 
     // Brand name (left aligned)
     .brand {
@@ -67,7 +73,7 @@
         > li > a {
             float: none;
             // Vertically center the text given $navbarHeight
-            padding: ((($navbarHeight - $baseLineHeight) / 2) - $navbarPillmMargin) 12px;
+            padding: ((($navbarHeight - $baseLineHeight) / 2) - $navbarPillmMargin) 15px;
             margin: $navbarPillmMargin 0;
             color: $navbarLinkColor;
             text-decoration: none;
@@ -80,6 +86,7 @@
             background-color: $navbarLinHoverkBackground; // "transparent" is default to differentiate :hover from .active
             color: $navbarLinkHoverColor;
             text-decoration: none;
+            @include transition(#{background-color linear .15s});
         }
 
         // Active nav items

@@ -2830,29 +2830,38 @@ pre code {
   margin-left: 0;
   margin-bottom: 24px;
   list-style: none;
+  opacity: 0.2;
+  -webkit-transition: opacity linear 0.3s;
+  -moz-transition: opacity linear 0.3s;
+  -o-transition: opacity linear 0.3s;
+  transition: opacity linear 0.3s;
 }
-/* line 12, scss/components/_navbar.scss */
+/* line 14, scss/components/_navbar.scss */
 .nav > li > a {
   display: block;
 }
-/* line 15, scss/components/_navbar.scss */
+/* line 17, scss/components/_navbar.scss */
 .nav > li > a:hover {
   text-decoration: none;
-  background-color: #f1f0ea;
+  background-color: #ebe9e1;
 }
-/* line 21, scss/components/_navbar.scss */
+/* line 23, scss/components/_navbar.scss */
 .nav > .pull-right {
   float: right;
 }
 
-/* line 28, scss/components/_navbar.scss */
+/* line 30, scss/components/_navbar.scss */
 .navbar {
   overflow: visible;
   margin-bottom: 40px;
   *position: relative;
   *z-index: 2;
 }
-/* line 36, scss/components/_navbar.scss */
+/* line 37, scss/components/_navbar.scss */
+.navbar:hover .nav {
+  opacity: 1;
+}
+/* line 42, scss/components/_navbar.scss */
 .navbar .brand {
   float: left;
   display: block;
@@ -2861,11 +2870,11 @@ pre code {
   font-weight: bold;
   color: #1aa4cd;
 }
-/* line 44, scss/components/_navbar.scss */
+/* line 50, scss/components/_navbar.scss */
 .navbar .brand:hover {
   text-decoration: none;
 }
-/* line 49, scss/components/_navbar.scss */
+/* line 55, scss/components/_navbar.scss */
 .navbar .nav {
   position: relative;
   left: 0;
@@ -2873,35 +2882,39 @@ pre code {
   float: left;
   margin: 0 10px 0 0;
 }
-/* line 56, scss/components/_navbar.scss */
+/* line 62, scss/components/_navbar.scss */
 .navbar .nav.pull-right {
   float: right;
   margin-right: -30px;
 }
-/* line 61, scss/components/_navbar.scss */
+/* line 67, scss/components/_navbar.scss */
 .navbar .nav > li {
   float: left;
   margin-left: 10px;
 }
-/* line 67, scss/components/_navbar.scss */
+/* line 73, scss/components/_navbar.scss */
 .navbar .nav > li > a {
   float: none;
-  padding: 6px 12px;
-  margin: 17px 0;
+  padding: 5px 15px;
+  margin: 18px 0;
   color: #262625;
   text-decoration: none;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 79, scss/components/_navbar.scss */
+/* line 85, scss/components/_navbar.scss */
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
-  background-color: #f1f0ea;
+  background-color: #ebe9e1;
   color: #262625;
   text-decoration: none;
+  -webkit-transition: background-color linear 0.15s;
+  -moz-transition: background-color linear 0.15s;
+  -o-transition: background-color linear 0.15s;
+  transition: background-color linear 0.15s;
 }
-/* line 88, scss/components/_navbar.scss */
+/* line 95, scss/components/_navbar.scss */
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
@@ -2910,7 +2923,7 @@ pre code {
   background-color: #ebe9e1;
 }
 
-/* line 96, scss/components/_navbar.scss */
+/* line 103, scss/components/_navbar.scss */
 .navbar-inner {
   min-height: 70px;
   *zoom: 1;
@@ -2925,37 +2938,37 @@ pre code {
 .navbar-inner:after {
   clear: both;
 }
-/* line 102, scss/components/_navbar.scss */
+/* line 109, scss/components/_navbar.scss */
 .navbar-inner > a:first-child {
   margin-left: -30px;
 }
 
-/* line 108, scss/components/_navbar.scss */
+/* line 115, scss/components/_navbar.scss */
 .nav-collapse.collapse {
   height: auto;
 }
 
-/* line 113, scss/components/_navbar.scss */
+/* line 120, scss/components/_navbar.scss */
 .navbar-text {
   margin-bottom: 0;
   line-height: 70px;
 }
 
-/* line 119, scss/components/_navbar.scss */
+/* line 126, scss/components/_navbar.scss */
 .navbar-link {
   color: #262625;
 }
-/* line 121, scss/components/_navbar.scss */
+/* line 128, scss/components/_navbar.scss */
 .navbar-link:hover {
   color: #262625;
 }
 
-/* line 131, scss/components/_navbar.scss */
+/* line 138, scss/components/_navbar.scss */
 .nav > .disabled > a {
   color: #666666;
 }
 
-/* line 135, scss/components/_navbar.scss */
+/* line 142, scss/components/_navbar.scss */
 .nav > .disabled > a:hover {
   text-decoration: none;
   background-color: transparent;
