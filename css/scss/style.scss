@@ -20,5 +20,10 @@
 // Common CSS styles
 @import "common/all";
 
+// Components
+@import "components/navbar";
+@import "components/narbar-responsive";
+@import "components/paper";
+
 // Special styleguide styles
 @import "pages/styleguide"

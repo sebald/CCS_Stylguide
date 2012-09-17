@@ -1,0 +1,139 @@
+//
+// Navbars (Redux)
+// --------------------------------------------------
+
+
+.nav {
+    margin-left: 0;
+    margin-bottom: $baseLineHeight;
+    list-style: none;
+
+    // Make links block level
+    > li > a {
+        display: block;
+    }
+    > li > a:hover {
+        text-decoration: none;
+        background-color: $navbarLinHoverkBackground;
+    }
+
+    // Redeclare pull classes because of specifity
+    > .pull-right {
+      float: right;
+    }
+}
+
+// NAVIGATION
+// ----------
+.navbar {
+    overflow: visible;
+    margin-bottom: 40px;
+    // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
+    *position: relative;
+    *z-index: 2;
+
+    // Brand name (left aligned)
+    .brand {
+        float: left;
+        display: block;
+        // Vertically center the text given $navbarHeight
+        padding: (($navbarHeight - $brandTextSize) / 2) 20px (($navbarHeight - $brandTextSize) / 2) 0;
+        font-size: $brandTextSize;
+        font-weight: bold;
+        color: $brandColor;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .nav {
+        position: relative;
+        left: 0;
+        display: block;
+        float: left;
+        margin: 0 10px 0 0;
+
+        &.pull-right {
+            float: right; // redeclare due to specificity
+            margin-right: -30px; // remove margin on float right nav
+        }
+
+        > li {
+          float: left;
+          margin-left: 10px;
+        }
+
+        // Links
+        > li > a {
+            float: none;
+            // Vertically center the text given $navbarHeight
+            padding: ((($navbarHeight - $baseLineHeight) / 2) - $navbarPillmMargin) 12px;
+            margin: $navbarPillmMargin 0;
+            color: $navbarLinkColor;
+            text-decoration: none;
+            @include border-radius(8px);
+        }
+
+        // Hover
+        > li > a:focus,
+        > li > a:hover {
+            background-color: $navbarLinHoverkBackground; // "transparent" is default to differentiate :hover from .active
+            color: $navbarLinkHoverColor;
+            text-decoration: none;
+        }
+
+        // Active nav items
+        > .active > a,
+        > .active > a:hover,
+        > .active > a:focus {
+            color: $navbarLinkColorActive;
+            text-decoration: none;
+            background-color: $navbarLinkActiveBackground;
+        }
+    }
+}
+
+.navbar-inner {
+    min-height: $navbarHeight;
+    // Prevent floats from breaking the navbar
+    @include clearfix();
+
+    // negative indent to align the text down the page
+    > a:first-child {
+        margin-left: -30px;
+    }
+}
+
+// Override the default collapsed state
+.nav-collapse.collapse {
+    height: auto;
+}
+
+// Plain text in topbar
+.navbar-text {
+    margin-bottom: 0;
+    line-height: $navbarHeight;
+}
+
+// Janky solution for now to account for links outside the .nav
+.navbar-link {
+    color: $navbarLinkColor;
+    &:hover {
+        color: $navbarLinkHoverColor;
+    }
+}
+
+
+// DISABLED STATES
+// ---------------
+
+// Gray out text
+.nav > .disabled > a {
+  color: $navbarTextDisabledColor;
+}
+// Nuke hover effects
+.nav > .disabled > a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  cursor: default;
+}

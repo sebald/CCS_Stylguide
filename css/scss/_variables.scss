@@ -114,3 +114,35 @@ $gridRowWidth1200:        			($gridColumns * $gridColumnWidth1200) + ($gridGutte
 $gridColumnWidth768:      			42px !default;
 $gridGutterWidth768:     			20px !default;
 $gridRowWidth768:         			($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1)) !default;
+
+
+// COMPONENT SETTINGS
+// --------------------------------------------------
+
+// Navbar
+// -------------------------
+
+$navbarTextColor:					$textColor !default;
+$navbarTextDisabledColor:			lighten($black, 40%) !default;
+$navbarHeight:						70px !default;
+
+$brandTextSize:						30px !default;
+
+$navbarPillmMargin:					17px !default;		// depending on the maring the pills grow smaller
+
+$navbarLinkColor:					$textColor !default;
+$navbarLinkHoverColor:				$textColor !default;
+$navbarLinkColorActive:				$textColor !default;;
+
+$navbarLinHoverkBackground:			lighten($backgroundAccentColor, 3%) !default;
+$navbarLinkActiveBackground:		$backgroundAccentColor !default;
+
+// Paper
+// -------------------------
+
+$paperColor:						$white !default;
+$paperBorderColor:					'rgba(0, 0, 0, 0.2)' !default;
+$paperHorizontalPadding:			40px !default;
+$paperVerticalPadding:				30px !default;
+$paperHorizontalSmallerPadding:		30px!default;
+$paperVeritcalSmallerPadding:		20px !default;
