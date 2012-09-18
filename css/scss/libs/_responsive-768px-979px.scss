@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 
-@media (min-width: 803px) and (max-width: 1259px) {
+@media (min-width: 915px) and (max-width: 1040px) {
 
   // Fixed grid
   @include grid-core($gridColumnWidth768, $gridGutterWidth768);
