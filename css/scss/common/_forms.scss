@@ -406,7 +406,7 @@ legend + .control-group {
         }
     }
     // make form fields take the rest of column width
-    input,
+    input[type="text"],
     select {
         max-width: 100%;
         @include box-sizing(border-box);
