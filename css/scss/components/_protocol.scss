@@ -1,0 +1,53 @@
+//
+// Protocol Layout
+// Requires: _paper.scss;
+// --------------------------------------------------
+
+.protocol {
+	padding-top: 25px;
+
+	table {
+		margin-bottom: 15px;
+
+		td {
+			background-color: $prococolTableTdColor;
+		}
+	}
+
+	dl {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	dt,
+	dd {
+		font-size: $protocolDlFontSize;
+		line-height: $protocolDlLineHeight;
+	}
+	dt {
+		width: $protocolDlOffset;
+	}
+	dd {
+		margin-left: ($protocolDlOffset + 5);
+		margin-bottom: $procotolDdMarginBottom;
+	}
+}
+
+.protocol-header {
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid $hrColor;
+	font-weight: bold;
+
+	[class*="span"]:last-child {
+		text-align: right;
+	}
+
+	h4 {
+		margin: 0;
+	}
+
+}
+
+.table-header {
+	margin-bottom: 1px;
+}
