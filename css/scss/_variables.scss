@@ -168,6 +168,9 @@ $paperVerticalPadding:				30px !default;
 $paperHorizontalSmallerPadding:		30px!default;
 $paperVeritcalSmallerPadding:		20px !default;
 
+$paperbottomMargin:					30px !default;
+$paperZIndex:						1 !default;
+
 // Procotol
 // -------------------------
 $protocolDlFontSize:				15px !default;
@@ -177,3 +180,8 @@ $procotolDdMarginBottom:			7px !default;
 
 $protocolTableBorderColor:			lighten($black, 45%) !default;
 $prococolTableTdColor:				#fefefe !default;
+
+// Procotol Tabs
+// -------------------------
+$protocolTabActiveColor:			$linkColor !default;
+$protocolTabPadding:				8px !default;
