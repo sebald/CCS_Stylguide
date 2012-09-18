@@ -21,8 +21,9 @@ legend {
 	width: 100%;
 	padding: 0;
 	margin-bottom: $baseLineHeight;
-	font-size: $baseFontSize * 1.5;
-	line-height: $baseLineHeight * 1.5;
+	font-size: $legendFontSize;
+    font-weight: bold;
+	line-height: $legendFontSize;
 	border: 0;
 	border-bottom: 1px solid #e5e5e5;
 }
@@ -72,7 +73,7 @@ input[type="color"],
 .uneditable-input {
     display: inline-block;
     height: $baseLineHeight;
-    padding: 4px;
+    padding: $inputPadding;
     margin-bottom: 9px;
     font-size: $baseFontSize;
     line-height: $baseLineHeight;
@@ -110,11 +111,11 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
     background-color: $inputBackground;
-    border: 1px solid $inputBorderColor;
+    border: $inputBorderSize solid $inputBorderColor;
     @include transition(#{border linear .2s, box-shadow linear .2s});
 
     &:hover {
-        border: 1px solid darken($inputBorderColor, 10%);
+        border: $inputBorderSize solid darken($inputBorderColor, 10%);
         @include box-shadow("inset 0 0 3px rgba(0,0,0,0.2)");
         z-index: 2;
     }
@@ -122,7 +123,7 @@ input[type="color"],
     &:focus,
     &.focused {
         outline: none;
-        border: 1px solid $brandColor;
+        border: $inputBorderSize solid $brandColor;
         @include box-shadow("inset 0 0 3px rgba(0,0,0,0.3)");
     }
 }
@@ -151,20 +152,21 @@ input[type="checkbox"] {
 // Set the height of select and file controls to match text inputs
 select,
 input[type="file"] {
-    height: 30px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+    height: 34px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
     *margin-top: 4px; /* For IE7, add top margin to align select with labels */
-    line-height: 30px;
+    line-height: 34px;
+    padding: $selectPadding;
 }
 
 // Make select elements obey height by applying a border
 select {
     width: 220px; // default input width + 10px of padding that doesn't get applied
-    border: 1px solid $inputBorderColor;
+    border: $inputBorderSize solid $inputBorderColor;
     background-color: $inputBackground; // Chrome on Linux and Mobile Safari need background-color
 
     &:focus {
         outline: none;
-        border: 1px solid $brandColor;
+        border: $inputBorderSize solid $brandColor;
         @include box-shadow("inset 0 1px 2px rgba(0,0,0,0.3)");
     }
 }
@@ -379,30 +381,38 @@ legend + .control-group {
 // --------------------------
 
 .form-horizontal {
-  // Increase spacing between groups
-  .control-group {
-    margin-bottom: $baseLineHeight;
-    @include clearfix();
-  }
-  // Float the labels left
-  .control-label {
-    float: left;
-    width: $horizontalComponentOffset - 20;
-    padding-top: 5px;
-    text-align: right;
-  }
-  // Move over all input controls and content
-  .controls {
+    // Increase spacing between groups
+    .control-group {
+        margin-bottom: $baseLineHeight;
+        @include clearfix();
+    }
+    // Float the labels left
+    .control-label {
+        float: left;
+        width: $horizontalLabelWidth;
+        padding-top: 5px;
+        text-align: right;
+    }
+    // Move over all input controls and content
+    .controls {
     // Super jank IE7 fix to ensure the inputs in .input-append and input-prepend
     // don't inherit the margin of the parent, in this case .controls
     *display: inline-block;
     *padding-left: 20px;
     margin-left: $horizontalComponentOffset;
     *margin-left: 0;
-    &:first-child {
-      *padding-left: $horizontalComponentOffset;
+        &:first-child {
+            *padding-left: $horizontalComponentOffset;
+        }
     }
-  }
+    // make form fields take the rest of column width
+    input,
+    select {
+        max-width: 100%;
+        @include box-sizing(border-box);
+        height: 34px;
+        line-height: 34px;
+    }
 }
 
 
@@ -442,7 +452,7 @@ legend + .control-group {
     text-align: center;
     //text-shadow: 0 1px 0 $white;
     @include gradient-vertical($addonAccentBackgroundColor, $addonBackgroundColor);
-    border: 1px solid $inputBorderColor;
+    border: $inputBorderSize solid $inputBorderColor;
   }
   .add-on,
   .btn {

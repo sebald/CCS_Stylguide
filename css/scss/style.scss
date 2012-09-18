@@ -14,9 +14,6 @@
 @import "libs/normalize";
 @import "libs/print";
 
-// Grid and page layouts (from Twitter Bootstrap)
-@import "libs/layout";
-
 // Common CSS styles
 @import "common/all";
 
@@ -24,6 +21,9 @@
 @import "components/navbar";
 @import "components/narbar-responsive";
 @import "components/paper";
+
+// Grid and page layouts (from Twitter Bootstrap)
+@import "libs/layout";
 
 // Special styleguide styles
 @import "pages/styleguide"
