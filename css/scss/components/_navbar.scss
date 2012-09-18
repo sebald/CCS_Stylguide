@@ -7,8 +7,6 @@
     margin-left: 0;
     margin-bottom: $baseLineHeight;
     list-style: none;
-    opacity: 0.2;
-    @include transition(#{opacity linear .3s});
 
     // Make links block level
     > li > a {
@@ -16,7 +14,6 @@
     }
     > li > a:hover {
         text-decoration: none;
-        background-color: $navbarLinHoverkBackground;
     }
 
     // Redeclare pull classes because of specifity
@@ -58,6 +55,8 @@
         display: block;
         float: left;
         margin: 0 10px 0 0;
+        opacity: 0.2;
+        @include transition(#{opacity linear .3s});
 
         &.pull-right {
             float: right; // redeclare due to specificity
