@@ -2212,8 +2212,9 @@ pre code {
   -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
 }
-/* line 18, scss/components/_paper.scss */
-.paper:before {
+
+/* line 20, scss/components/_paper.scss */
+.paper-stacked:before {
   z-index: -1;
   position: absolute;
   top: -2px;
@@ -2232,8 +2233,8 @@ pre code {
   -o-transform: rotate(1deg);
   transform: rotate(1deg);
 }
-/* line 31, scss/components/_paper.scss */
-.paper:after {
+/* line 33, scss/components/_paper.scss */
+.paper-stacked:after {
   z-index: -2;
   position: absolute;
   top: 1px;
@@ -2253,19 +2254,19 @@ pre code {
   transform: rotate(359deg);
 }
 
-@media (max-width: 803px) {
-  /* line 47, scss/components/_paper.scss */
-  .paper {
+@media (max-width: 767px) {
+  /* line 50, scss/components/_paper.scss */
+  .paper.stacked {
     padding: 30px 20px;
     border-left: none;
     border-right: none;
   }
-  /* line 52, scss/components/_paper.scss */
-  .paper:before {
+  /* line 55, scss/components/_paper.scss */
+  .paper.stacked:before {
     display: none;
   }
-  /* line 56, scss/components/_paper.scss */
-  .paper:after {
+  /* line 59, scss/components/_paper.scss */
+  .paper.stacked:after {
     display: none;
   }
 }

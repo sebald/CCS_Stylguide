@@ -89,17 +89,23 @@ ol.unstyled {
 
 // Description Lists
 dl {
-  margin-bottom: $baseLineHeight;
+    margin-bottom: $baseLineHeight;
+    @include clearfix(); // Ensure dl clears floats if empty dd elements present
 }
 dt,
 dd {
-  line-height: $baseLineHeight;
+    line-height: $baseLineHeight;
 }
 dt {
-  font-weight: bold;
+    font-weight: bold;
+    float: left;
+    width: $ddOffset;
+    clear: left;
+    text-align: left;
+    @include text-overflow();
 }
 dd {
-  margin-left: $baseLineHeight / 2;
+    margin-left: ($ddOffset + 5);
 }
 
 // MISC

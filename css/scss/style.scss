@@ -21,9 +21,10 @@
 @import "components/navbar";
 @import "components/narbar-responsive";
 @import "components/paper";
+@import "components/protocol";
 
 // Grid and page layouts (from Twitter Bootstrap)
 @import "libs/layout";
 
 // Special styleguide styles
-@import "pages/styleguide"
+@import "pages/styleguide";

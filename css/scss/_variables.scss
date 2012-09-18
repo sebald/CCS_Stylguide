@@ -44,8 +44,10 @@ $headingsFontFamily:    			inherit !default; // empty to use default, $baseFontF
 $headingsFontWeight:    			bold !default;    // instead of browser default, bold
 $headingsColor:         			$textColor !default; // empty to use default, $textColor
 
-
 $placeholderText:					lighten($textColor, 40%) !default;
+
+$ddOffset:							170px !default;
+
 
 // Forms
 // -------------------------
@@ -72,6 +74,7 @@ $addonAccentBackgroundColor:		#f9f9f9 !default;
 $errorTextColor:					$alert !default;
 $errorBorderColor:					$alert !default;
 $errorBackground:					lighten($alert, 20%) !default;
+
 
 // Buttons
 // -------------------------
@@ -100,6 +103,17 @@ $btnFontSizeSmall:					11px !default;
 $btnFontSizeLarge:					16px !default;
 
 $btnBorderRadius:					2px !default;
+
+
+// Tables
+// -------------------------
+$tableFontSize:						14px !default;
+$tableLineHeight:					16px !default;
+
+$tableBackground:					$white !default;
+$tableBorderColor:					$textColor !default;
+
+$tableHeadColor:					darken($white, 4%) !default;
 
 
 // GRID (frin Twitter Bootstrap)
@@ -153,3 +167,13 @@ $paperHorizontalPadding:			40px !default;
 $paperVerticalPadding:				30px !default;
 $paperHorizontalSmallerPadding:		30px!default;
 $paperVeritcalSmallerPadding:		20px !default;
+
+// Procotol
+// -------------------------
+$protocolDlFontSize:				15px !default;
+$protocolDlLineHeight:				19px !default;
+$protocolDlOffset:					160px !default;
+$procotolDdMarginBottom:			7px !default;
+
+$protocolTableBorderColor:			lighten($black, 45%) !default;
+$prococolTableTdColor:				#fefefe !default;
