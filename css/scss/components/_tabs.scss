@@ -5,9 +5,8 @@
 
 .nav-protocol {
 	position: absolute;
-	bottom: #{-($paperbottomMargin + $baseLineHeight + $protocolTabPadding + 4)};
-	left: 10px;
-	@include clearfix();
+	bottom: #{-($paperbottomMargin + $baseLineHeight + $protocolTabPadding + 4)}; // 3 = 2*paperBorder + 2*tabBorder
+	left: -1px;
 }
 .nav-protocol > li {
 	float: left;
@@ -20,9 +19,9 @@
 	color: lighten($textColor, 50%);
 	border: 1px solid  #{$paperBorderColor};
 
-	@include gradient-vertical(#f2f2f2, #fcfcfc);
+	@include gradient-vertical(#f2f2f2, #f9f9f9);
 	@include border-radius(0 0 4px 4px);
-	@include box-shadow('inset 0px 2px 2px -1px rgba(0, 0, 0, 0.22), 1px 2px 2px rgba(0, 0, 0, 0.1)');
+	@include box-shadow('inset 0px 2px 2px -1px rgba(0, 0, 0, 0.22), 1px 1px 2px rgba(0, 0, 0, 0.1)');
 
 	&:hover {
 		color: $protocolTabActiveColor;
@@ -35,6 +34,6 @@
 	color: $protocolTabActiveColor;
 	cursor: default;
 	background: $white;
-	border-top-color: $white;
-	@include box-shadow('1px 2px 2px rgba(0, 0, 0, 0.22)');
+	border-top: transparent;
+	@include box-shadow('1px 2px 2px rgba(0, 0, 0, 0.16)');
 }

@@ -2268,26 +2268,15 @@ pre code {
 .nav-protocol {
   position: absolute;
   bottom: -66px;
-  left: 10px;
-  *zoom: 1;
-}
-/* line 10, scss/mixins/_clearfix.scss */
-.nav-protocol:before, .nav-protocol:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-/* line 17, scss/mixins/_clearfix.scss */
-.nav-protocol:after {
-  clear: both;
+  left: -1px;
 }
 
-/* line 12, scss/components/_tabs.scss */
+/* line 11, scss/components/_tabs.scss */
 .nav-protocol > li {
   float: left;
 }
 
-/* line 15, scss/components/_tabs.scss */
+/* line 14, scss/components/_tabs.scss */
 .nav-protocol > li > a {
   padding: 8px 12px;
   margin-right: 4px;
@@ -2295,53 +2284,64 @@ pre code {
   line-height: 24px;
   color: #a6a6a4;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #f2f2f2, #fcfcfc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#fcfcfc));
-  background-image: -webkit-linear-gradient(top, #f2f2f2, #fcfcfc);
-  background-image: -o-linear-gradient(top, #f2f2f2, #fcfcfc);
-  background-image: linear-gradient(to bottom, #f2f2f2, #fcfcfc);
+  background-color: #f4f4f4;
+  background-image: -moz-linear-gradient(top, #f2f2f2, #f9f9f9);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#f9f9f9));
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #f9f9f9);
+  background-image: -o-linear-gradient(top, #f2f2f2, #f9f9f9);
+  background-image: linear-gradient(to bottom, #f2f2f2, #f9f9f9);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF2F2F2', endColorstr='#FFFCFCFC', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF2F2F2', endColorstr='#FFF9F9F9', GradientType=0);
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
-  -webkit-box-shadow: inset 0px 2px 2px -1px rgba(0, 0, 0, 0.22), 1px 2px 2px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0px 2px 2px -1px rgba(0, 0, 0, 0.22), 1px 2px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0px 2px 2px -1px rgba(0, 0, 0, 0.22), 1px 2px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0px 2px 2px -1px rgba(0, 0, 0, 0.22), 1px 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 2px 2px -1px rgba(0, 0, 0, 0.22), 1px 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 2px 2px -1px rgba(0, 0, 0, 0.22), 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
-/* line 27, scss/components/_tabs.scss */
+/* line 26, scss/components/_tabs.scss */
 .nav-protocol > li > a:hover {
   color: #1aa4cd;
   background: white;
 }
 
-/* line 34, scss/components/_tabs.scss */
+/* line 33, scss/components/_tabs.scss */
 .nav-protocol > .active > a,
 .nav-protocol > .active > a:hover {
   color: #1aa4cd;
   cursor: default;
   background: white;
-  border-top-color: white;
-  -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.22);
-  -moz-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.22);
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.22);
+  border-top: transparent;
+  -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.16);
 }
 
 /* line 10, scss/components/_paper.scss */
 .paper {
-  display: table;
   position: relative;
+  width: 940px;
   padding: 40px 30px;
   margin: 24px auto 30px;
+  *zoom: 1;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
 }
+/* line 10, scss/mixins/_clearfix.scss */
+.paper:before, .paper:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 17, scss/mixins/_clearfix.scss */
+.paper:after {
+  clear: both;
+}
 
-/* line 20, scss/components/_paper.scss */
+/* line 21, scss/components/_paper.scss */
 .paper-stacked:before {
   z-index: -1;
   position: absolute;
@@ -2361,7 +2361,7 @@ pre code {
   -o-transform: rotate(1deg);
   transform: rotate(1deg);
 }
-/* line 33, scss/components/_paper.scss */
+/* line 34, scss/components/_paper.scss */
 .paper-stacked:after {
   z-index: -2;
   position: absolute;
@@ -2382,18 +2382,31 @@ pre code {
   transform: rotate(359deg);
 }
 
+@media (min-width: 1278px) {
+  /* line 8, scss/components/_paper-responsive.scss */
+  .paper {
+    width: 1170px;
+  }
+}
+@media (min-width: 915px) and (max-width: 1040px) {
+  /* line 16, scss/components/_paper-responsive.scss */
+  .paper {
+    width: 820px;
+  }
+}
 @media (max-width: 767px) {
-  /* line 50, scss/components/_paper.scss */
-  .paper-stacked {
+  /* line 24, scss/components/_paper-responsive.scss */
+  .paper {
     padding: 30px 20px;
     border-left: none;
     border-right: none;
   }
-  /* line 55, scss/components/_paper.scss */
+
+  /* line 32, scss/components/_paper-responsive.scss */
   .paper-stacked:before {
     display: none;
   }
-  /* line 59, scss/components/_paper.scss */
+  /* line 36, scss/components/_paper-responsive.scss */
   .paper-stacked:after {
     display: none;
   }
