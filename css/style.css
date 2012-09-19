@@ -2330,11 +2330,10 @@ pre code {
 
 /* line 10, scss/components/_paper.scss */
 .paper {
+  display: table;
   position: relative;
-  min-height: 500px;
   padding: 40px 30px;
-  margin-top: 24px;
-  margin-bottom: 30px;
+  margin: 24px auto 30px;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
@@ -2342,7 +2341,7 @@ pre code {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
 }
 
-/* line 21, scss/components/_paper.scss */
+/* line 20, scss/components/_paper.scss */
 .paper-stacked:before {
   z-index: -1;
   position: absolute;
@@ -2362,7 +2361,7 @@ pre code {
   -o-transform: rotate(1deg);
   transform: rotate(1deg);
 }
-/* line 34, scss/components/_paper.scss */
+/* line 33, scss/components/_paper.scss */
 .paper-stacked:after {
   z-index: -2;
   position: absolute;
@@ -2384,17 +2383,17 @@ pre code {
 }
 
 @media (max-width: 767px) {
-  /* line 51, scss/components/_paper.scss */
+  /* line 50, scss/components/_paper.scss */
   .paper-stacked {
     padding: 30px 20px;
     border-left: none;
     border-right: none;
   }
-  /* line 56, scss/components/_paper.scss */
+  /* line 55, scss/components/_paper.scss */
   .paper-stacked:before {
     display: none;
   }
-  /* line 60, scss/components/_paper.scss */
+  /* line 59, scss/components/_paper.scss */
   .paper-stacked:after {
     display: none;
   }
