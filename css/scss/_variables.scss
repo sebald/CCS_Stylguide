@@ -113,7 +113,9 @@ $tableLineHeight:					16px !default;
 $tableBackground:					$white !default;
 $tableBorderColor:					$textColor !default;
 
-$tableHeadColor:					darken($white, 4%) !default;
+$tableHeadColor:					darken($white, 3%) !default;
+
+$tableBackgroundAccent:				darken($white, 2%) !default;
 
 
 // GRID (frin Twitter Bootstrap)
@@ -149,7 +151,7 @@ $navbarHeight:						70px !default;
 
 $brandTextSize:						30px !default;
 
-$navbarPillmMargin:					18px !default;		// depending on the maring the pills grow smaller
+$navbarPillmMargin:					18px !default;		// depending on the margin the pills grow smaller
 
 $navbarLinkColor:					$textColor !default;
 $navbarLinkHoverColor:				$textColor !default;
@@ -168,7 +170,7 @@ $paperVerticalPadding:				30px !default;
 $paperHorizontalSmallerPadding:		30px!default;
 $paperVeritcalSmallerPadding:		20px !default;
 
-$paperbottomMargin:					30px !default;
+$paperbottomMargin:					70px !default;
 $paperZIndex:						1 !default;
 
 // Procotol
@@ -185,3 +187,14 @@ $prococolTableTdColor:				#fefefe !default;
 // -------------------------
 $protocolTabActiveColor:			$linkColor !default;
 $protocolTabPadding:				8px !default;
+
+// Cycle Diageam
+// -------------------------
+
+$cycleOddColor:						lighten($black, 70%) !default;
+$cylceEvenColor:					lighten($black , 55%) !default;
+
+/*
+$cycleOddColor:						lighten($brandColor, 10%) !default;
+$cylceEvenColor:					darken($brandAccentColor , 5%) !default;
+*/
