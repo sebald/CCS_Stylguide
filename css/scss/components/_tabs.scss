@@ -5,7 +5,7 @@
 
 .nav-protocol {
 	position: absolute;
-	bottom: #{-($paperbottomMargin + $baseLineHeight + $protocolTabPadding + 4)}; // 3 = 2*paperBorder + 2*tabBorder
+	bottom: #{-(30 + $baseLineHeight + $protocolTabPadding + 4)}; // 3 = 2*paperBorder + 2*tabBorder
 	left: -1px;
 }
 .nav-protocol > li {
@@ -13,7 +13,7 @@
 }
 .nav-protocol > li > a {
 	padding: $protocolTabPadding 12px;
-	margin-right: 4px;
+	margin-right: 6px;
 	background-color: $white;
 	line-height: $baseLineHeight;
 	color: lighten($textColor, 50%);
@@ -27,6 +27,10 @@
 		color: $protocolTabActiveColor;
 		background: $white;
 	}
+
+	&:focus {
+		outline: none;
+	}
 }
 // Active state, and it's :hover to override normal :hover
 .nav-protocol > .active > a,
@@ -36,4 +40,16 @@
 	background: $white;
 	border-top: transparent;
 	@include box-shadow('1px 2px 2px rgba(0, 0, 0, 0.16)');
+}
+
+.tab-content {
+  overflow: auto;
+}
+
+.tab-content > .tab-pane {
+  display: none;
+}
+
+.tab-content > .active {
+  display: block;
 }
