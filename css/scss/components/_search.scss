@@ -1,0 +1,20 @@
+//
+// Search Layout
+// --------------------------------------------------
+
+.search-box {
+	background-color: $searchBoxBackgroundColor;
+	margin: 25px 0;
+	padding: 25px 0;
+	text-align: center;
+	border: 1px solid darken($searchBoxBackgroundColor, 3%);
+	@include border-radius(3px);
+
+	.form-inline {
+		margin: 0;
+	}
+
+	.search-field {
+		width: 50%;
+	}
+}
