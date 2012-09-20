@@ -204,9 +204,15 @@ $cylceEvenColor:					lighten($black , 55%) !default;
 // --------------------------------------------------
 
 $timberNodeSize:					18px !default;
+$timberNodeColor:					$textColor;
 
 $timberFolderSize:					20px !default;
 $timberFolderColor:					#fcf99c !default;
 $timberFolderBorderColor:			#676767 !default;
 
 $timberFileColor:					#f0fcff !default;
+
+$timberLeafColor:					lighten($textColor, 10%) !default;
+
+$timberGuideColor:					$brandAccentColor !default;
+$timberLeafHoverBackgroundColor:	$brandColor !default;

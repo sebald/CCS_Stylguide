@@ -3729,12 +3729,16 @@ pre code {
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
+  -webkit-transition: color 0.15s linear;
+  -moz-transition: color 0.15s linear;
+  -o-transition: color 0.15s linear;
+  transition: color 0.15s linear;
 }
-/* line 26, scss/components/_timber.scss */
+/* line 27, scss/components/_timber.scss */
 .timber .timber-node:focus, .timber .timber-node:active {
   outline: none;
 }
-/* line 31, scss/components/_timber.scss */
+/* line 32, scss/components/_timber.scss */
 .timber .timber-node:before {
   font-family: FontAwesome;
   font-weight: normal;
@@ -3746,41 +3750,57 @@ pre code {
   content: "\f056";
   margin-right: 7px;
 }
-/* line 42, scss/components/_timber.scss */
+/* line 43, scss/components/_timber.scss */
 .timber .timber-node.open:before {
   content: "\f055";
 }
-/* line 46, scss/components/_timber.scss */
+/* line 47, scss/components/_timber.scss */
 .timber .timber-node .timber-node:before {
   margin-right: 9px;
 }
-/* line 51, scss/components/_timber.scss */
+/* line 52, scss/components/_timber.scss */
 .timber .timber-leaf {
   margin-left: 20px;
   line-height: 23px;
+  -webkit-transition: color 0.15s linear;
+  -moz-transition: color 0.15s linear;
+  -o-transition: color 0.15s linear;
+  transition: color 0.15s linear;
 }
-/* line 56, scss/components/_timber.scss */
+/* line 57, scss/components/_timber.scss */
+.timber .timber-leaf a {
+  color: #40403e;
+}
+/* line 61, scss/components/_timber.scss */
+.timber .timber-leaf:hover a {
+  color: #1aa4cd;
+}
+/* line 66, scss/components/_timber.scss */
 .timber [class^="icon-"] {
   font-size: 20px;
   text-shadow: -1px -1px 0 #676767, 1px -1px 0 #676767, -1px 1px 0 #676767, 1px 1px 0 #676767;
   text-align: left;
   margin-right: -2px;
 }
-/* line 65, scss/components/_timber.scss */
+/* line 75, scss/components/_timber.scss */
 .timber [class^="icon-folder-"] {
   color: #fcf99c;
 }
-/* line 70, scss/components/_timber.scss */
+/* line 80, scss/components/_timber.scss */
 .timber [class="icon-file"] {
   color: #f0fcff;
 }
-/* line 73, scss/components/_timber.scss */
+/* line 83, scss/components/_timber.scss */
 .timber [class="icon-file"]:before {
   margin-left: 3px;
 }
-/* line 79, scss/components/_timber.scss */
+/* line 89, scss/components/_timber.scss */
 .timber ul [class^="icon-folder-"] {
   margin-left: 3px;
+}
+/* line 94, scss/components/_timber.scss */
+.timber .guide {
+  color: #178cb0;
 }
 
 /* line 6, scss/libs/_grid.scss */

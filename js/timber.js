@@ -46,6 +46,19 @@
             $node.next('ul').hide(this.options.speed)
         }
 
+        , mouseenter : function (e) {
+            var $target = $(e.target)
+            if ($target.is('.timber-node')) $target.addClass('guide')
+            $($target).parentsUntil('.timber', 'ul').prev('.timber-node').addClass('guide')
+        }
+
+        , mouseleave : function (e) {
+            var $target = $(e.target)
+            if ($target.is('.timber-node')) $target.removeClass('guide')
+            $($target).parentsUntil('.timber', 'ul').prev('.timber-node').removeClass('guide')
+
+        }
+
         , click: function (e) {
             e.stopPropagation()
             e.preventDefault()
@@ -60,6 +73,11 @@
         , listen: function () {
             this.$nodes
                 .on('click', $.proxy(this.click, this))
+                .on('mouseenter', $.proxy(this.mouseenter, this))
+                .on('mouseleave', $.proxy(this.mouseleave, this))
+            this.$leafs
+                .on('mouseenter', $.proxy(this.mouseenter, this))
+                .on('mouseleave', $.proxy(this.mouseleave, this))
         }
 
     }

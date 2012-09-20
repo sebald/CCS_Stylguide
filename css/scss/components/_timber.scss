@@ -18,10 +18,11 @@
     }
 
     .timber-node {
-    	color: $textColor;
+    	color: $timberNodeColor;
     	font-weight: bold;
     	font-size: $timberNodeSize;
     	line-height: $timberFolderSize;
+    	@include transition(color 0.15s linear);
 
     	&:focus, &:active {
     		outline: none;
@@ -51,6 +52,15 @@
     .timber-leaf {
     	margin-left: 20px;
     	line-height: 23px;
+    	@include transition(color 0.15s linear);
+
+    	a {
+    		color: $timberLeafColor;
+    	}
+
+    	&:hover a {
+    		color: $timberLeafHoverBackgroundColor;
+    	}
     }
 
     [class^="icon-"] {
@@ -78,6 +88,11 @@
     // every node which isn't a root not gets additional alignment
     ul [class^="icon-folder-"] {
     	margin-left: 3px;
+    }
+
+    // guides for better usability (coloring nodes)
+    .guide {
+    	color: $timberGuideColor;
     }
 
 }
