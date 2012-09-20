@@ -4,24 +4,21 @@
 
 
 @media (min-width: 1278px) {
-
 	.paper {
 		width: 1170px;
 	}
-
 }
 
 @media (min-width: 915px) and (max-width: 1040px) {
-
 	.paper {
 		width: 820px;
 	}
-
 }
 
 // alternative styling on smaller screens (no fancy paper stack)
-@media (max-width: 767px) {
+@media (max-width: 914px) {
 	.paper {
+		width: 100%;
 		padding: $paperHorizontalSmallerPadding $paperVeritcalSmallerPadding;
 		border-left: none;
 		border-right: none;

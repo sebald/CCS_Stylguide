@@ -3,8 +3,10 @@
 // --------------------------------------------------
 
 // alternative styling on smaller screens (no fancy paper stack)
-@media (max-width: 803px) {
-    .navbar .nav {
+@media (max-width: 914px) {
+
+    .navbar .nav,
+    .navbar .brand {
     	// refit to page
         &.pull-right {
             margin-right: 5px;
