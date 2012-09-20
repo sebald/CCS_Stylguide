@@ -160,6 +160,11 @@ $navbarLinkColorActive:				$textColor !default;
 $navbarLinkActiveBackground:		$backgroundAccentColor !default;
 $navbarLinHoverkBackground:			$backgroundAccentColor !default;
 
+// SearchBox
+// -------------------------
+
+$searchBoxBackgroundColor:			#f9f9f9 !default;
+
 // Paper
 // -------------------------
 
@@ -194,7 +199,14 @@ $protocolTabPadding:				8px !default;
 $cycleOddColor:						lighten($black, 70%) !default;
 $cylceEvenColor:					lighten($black , 55%) !default;
 
-/*
-$cycleOddColor:						lighten($brandColor, 10%) !default;
-$cylceEvenColor:					darken($brandAccentColor , 5%) !default;
-*/
+
+// JQUERY PLUGINS
+// --------------------------------------------------
+
+$timberNodeSize:					18px !default;
+
+$timberFolderSize:					20px !default;
+$timberFolderColor:					#fcf99c !default;
+$timberFolderBorderColor:			#676767 !default;
+
+$timberFileColor:					#f0fcff !default;

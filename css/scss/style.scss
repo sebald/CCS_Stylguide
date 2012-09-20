@@ -14,6 +14,9 @@
 @import "libs/normalize";
 @import "libs/print";
 
+// Font awesome
+@import "libs/font-awesome";
+
 // Common CSS styles
 @import "common/all";
 
@@ -21,10 +24,16 @@
 @import "components/navbar";
 @import "components/narbar-responsive";
 @import "components/tabs";
+@import "components/search";
+
 @import "components/paper";
 @import "components/paper-responsive";
+
 @import "components/protocol";
 @import "components/cycle-diagram";
+
+// JS styles
+@import "components/timber";
 
 // Grid and page layouts (from Twitter Bootstrap)
 @import "libs/layout";

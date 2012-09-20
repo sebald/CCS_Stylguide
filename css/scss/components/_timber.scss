@@ -1,0 +1,83 @@
+//
+// Timber (jQuery Plugin)
+// Requires: Font Awesome (http://fortawesome.github.com/Font-Awesome/);
+// --------------------------------------------------
+
+.timber {
+	list-style: none outside none;
+    margin-left: 0;
+
+    ul {
+    	list-style: none outside none;
+    	margin: 2px 0 0 21px;
+
+    	// additional alignment for non-root leafs
+    	.timber-leaf {
+    		margin-left: 23px;
+    	}
+    }
+
+    .timber-node {
+    	color: $textColor;
+    	font-weight: bold;
+    	font-size: $timberNodeSize;
+    	line-height: $timberFolderSize;
+
+    	&:focus, &:active {
+    		outline: none;
+    	}
+
+    	// addtitional +/- button for (inner) nodes
+    	&:before {
+			font-family: FontAwesome;
+			font-weight: normal;
+			font-style: normal;
+			font-size: 16px;
+			color: #adadad;
+			display: inline-block;
+			text-decoration: inherit;
+    		content: "\f056";
+    		margin-right: 7px;
+    	}
+    	&.open:before {
+    		content: "\f055";
+    	}
+
+    	.timber-node:before {
+    		margin-right: 9px;
+    	}
+    }
+
+    .timber-leaf {
+    	margin-left: 20px;
+    	line-height: 23px;
+    }
+
+    [class^="icon-"] {
+    	font-size: $timberFolderSize;
+    	text-shadow: -1px -1px 0 $timberFolderBorderColor, 1px -1px 0 $timberFolderBorderColor,
+    				 -1px 1px 0 $timberFolderBorderColor,  1px 1px 0 $timberFolderBorderColor;
+    	text-align: left;
+    	margin-right: -2px;
+    }
+
+    // (inner) nodes as open or closed folder
+    [class^="icon-folder-"] {
+    	color: $timberFolderColor;
+    }
+
+    // leafs
+    [class="icon-file"] {
+    	color: $timberFileColor;
+
+    	&:before {
+    		margin-left: 3px;
+    	}
+    }
+
+    // every node which isn't a root not gets additional alignment
+    ul [class^="icon-folder-"] {
+    	margin-left: 3px;
+    }
+
+}
