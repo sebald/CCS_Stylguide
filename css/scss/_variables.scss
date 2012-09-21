@@ -203,6 +203,22 @@ $cylceEvenColor:					lighten($black , 55%) !default;
 // JQUERY PLUGINS
 // --------------------------------------------------
 
+// Typeahed
+// -------------------------
+
+$typeaheadBackgroundColor:			$white !default;
+$typeaheadBorderColor:				#afafaf !default;
+$typeaheadBorderRadius:				$inputBorderRadius !default;
+
+$typeaheadTypeColor:				lighten($textColor, 50%) !default;
+$typeaheadTypeSize:					13px !default;
+
+$typeaheadActiveColor:				$brandColor !default;
+$typeaheadActiveColorHighlight:		adjust-hue($brandColor, 10%) !default;
+
+// Timber
+// -------------------------
+
 $timberNodeSize:					18px !default;
 $timberNodeColor:					$textColor;
 

@@ -1,0 +1,62 @@
+//
+// Typeahed (JS Plugin)
+// --------------------------------------------------
+
+
+.typeahead.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 160px;
+	padding: 0;
+	margin: 1px 0 0;
+	list-style: none;
+	cursor: pointer;
+	background-color: $typeaheadBackgroundColor;
+	border: 1px solid $typeaheadBorderColor;
+	@include border-radius($typeaheadBorderRadius);
+	@include box-shadow('0 3px 8px rgba(0, 0, 0, 0.2)');
+
+	li {
+		border-bottom: 1px solid #f0f0f0;
+	}
+
+	li:last-child {
+		border-bottom: none;
+	}
+
+	a {
+		display: block;
+		clear: both;
+		padding: 5px 8px;
+		font-weight: normal;
+		color: $textColor;
+		white-space: nowrap;
+		text-decoration: none;
+	}
+
+	span {
+		display:block;
+		color: $typeaheadTypeColor;
+		font-size: $typeaheadTypeSize;
+		line-height: $typeaheadTypeSize;
+		font-style: italic;
+		padding-bottom: 5px;
+	}
+
+	.active {
+		@include buttonBackground($typeaheadActiveColor, $typeaheadActiveColorHighlight);
+
+		a {
+			color: $white;
+		}
+
+		span {
+			color: #eee;
+		}
+	}
+
+}
